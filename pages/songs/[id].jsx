@@ -24,7 +24,9 @@ const Song = ({song}) => {
                 <h1 className="text-3xl font-bold">{song.name}</h1>
                 <p>{song.artist?.name}</p>
             </div>
-            <iframe width="100%" height="315" src={`https://www.youtube.com/embed/${song.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <div className="aspect-w-16 aspect-h-9">
+                <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${song.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            </div>
             <Link href ="/" passHref>
                 <button type="button" className="flex space-x-1 px-4 py-2 bg-gray-300 rounded-md hover:bg-gray-400 mt-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
